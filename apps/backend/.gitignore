@@ -1,0 +1,6 @@
+# Drizzle migrations (uncomment if needed to ignore)
+# drizzle/
+
+# Local database files
+*.db
+*.sqlite

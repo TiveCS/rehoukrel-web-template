@@ -1,0 +1,37 @@
+# Dependencies
+node_modules
+
+# Git
+.git
+.gitignore
+
+# Environment files (will be passed at runtime)
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist
+dist-ssr
+.output
+.nitro
+.vinxi
+.wrangler
+
+# Logs
+*.log
+
+# Development
+.vscode
+.idea
+.tanstack
+
+# Testing
+coverage
+
+# Misc
+README.md
+.DS_Store
+*.local
+count.txt
+todos.json

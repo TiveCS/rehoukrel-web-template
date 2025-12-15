@@ -1,0 +1,36 @@
+# Dependencies
+node_modules
+
+# Git
+.git
+.gitignore
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+activity.log
+
+# Development
+.vscode
+.idea
+
+# Testing
+coverage
+
+# Build artifacts
+dist
+build
+*.tgz
+
+# Database
+*.db
+*.sqlite
+drizzle/
+
+# Misc
+README.md
+.DS_Store

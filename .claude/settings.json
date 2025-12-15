@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "user-prompt-submit": {
+      "command": "echo 'Validating project state...'",
+      "description": "Pre-submit validation"
+    },
+    "after-edit": {
+      "command": "if [[ $FILE_PATH == *.ts ]] || [[ $FILE_PATH == *.tsx ]]; then cd $(dirname $FILE_PATH) && bun run --silent biome check --files-ignore-unknown=true $FILE_PATH 2>&1 || true; fi",
+      "description": "Run Biome check on TypeScript files after edit"
+    }
+  }
+}

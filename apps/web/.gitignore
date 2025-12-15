@@ -1,0 +1,6 @@
+# TanStack specific
+.tanstack/
+
+# Nitro cache
+.nitro/
+.output/
