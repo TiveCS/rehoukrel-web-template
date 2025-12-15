@@ -7,7 +7,7 @@ export type AuthError = CommonError & {
 
 export const AuthErrors = {
   Unauthorized: {
-    code: "auth.validation_error",
+    code: "auth.unauthorized",
     statusCode: HttpStatus.Unauthorized,
     description: "You are not authorized to access this resource.",
   },

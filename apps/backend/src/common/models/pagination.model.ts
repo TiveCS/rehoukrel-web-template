@@ -1,8 +1,8 @@
 import z from "zod";
 
 export const paginationRequestSchema = z.object({
-  page: z.int().min(1).default(1),
-  pageSize: z.int().min(1).default(10),
+  page: z.coerce.number().int().min(1).default(1),
+  pageSize: z.coerce.number().int().min(1).default(10),
 });
 
 export type PaginationRequest = z.infer<typeof paginationRequestSchema>;

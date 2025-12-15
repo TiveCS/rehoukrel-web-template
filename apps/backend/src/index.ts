@@ -6,6 +6,7 @@ import "reflect-metadata";
 import { env } from "./common/env";
 import { BetterAuthOpenAPI, betterAuth } from "./infra/auth/auth.setup";
 import { todosRoute } from "./modules/todos/routes";
+import z from "zod";
 
 const app = new Elysia()
   .use(
@@ -27,6 +28,9 @@ const app = new Elysia()
       documentation: {
         components: await BetterAuthOpenAPI.components,
         paths: await BetterAuthOpenAPI.getPaths(),
+      },
+      mapJsonSchema: {
+        zod: z.toJSONSchema,
       },
     }),
   )
