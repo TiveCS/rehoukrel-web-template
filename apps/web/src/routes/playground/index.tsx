@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { MultiSelect } from "@/components/blocks/multi-select";
+import { FileUpload } from "@/components/ui/file-upload";
+import { AppFileUpload } from "@/components/blocks/AppFileUpload";
 
 export const Route = createFileRoute("/playground/")({
   component: PlaygroundPage,
@@ -18,14 +20,7 @@ function PlaygroundPage() {
 
   return (
     <div className="p-8">
-      <MultiSelect
-        label="Tricks"
-        value={value}
-        onValueChange={setValue}
-        options={tricks}
-        placeholder="Select tricks..."
-        emptyMessage="No tricks found."
-      />
+      <AppFileUpload />
     </div>
   );
 }
